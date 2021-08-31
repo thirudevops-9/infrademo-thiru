@@ -12,7 +12,7 @@ data "template_file" "userr_data" {
 }
 
 resource "aws_instance" "dev-jenkins" {
-  ami             = "ami-0443305dabd4be2bc"
+  ami             = "ami-054a31f1b3bf90920"
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.dev-private-subnet-1a.id
   security_groups = ["${aws_security_group.jenkins-security-group.id}", "${aws_security_group.bastion-security-roup.id}"]

@@ -11,7 +11,7 @@ data "template_file" "user_data" {
 
 
 resource "aws_instance" "elk-itps" {
-  ami             = "ami-00399ec92321828f5"
+  ami             = "ami-0f8243a5175208e08"
   instance_type   = "t2.xlarge"
   subnet_id       = aws_subnet.dev-public-subnet-1a.id
   security_groups = ["${aws_security_group.elk-security-group.id}"] 

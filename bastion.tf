@@ -11,7 +11,7 @@
 
 
 resource "aws_instance" "dev-bastion" {
-  ami             = "ami-0443305dabd4be2bc"   
+  ami             = "ami-0f8243a5175208e08"   
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.dev-public-subnet-1a.id
   security_groups = ["${aws_security_group.bastion-security-roup.id}"]
@@ -35,5 +35,5 @@ resource "aws_instance" "dev-bastion" {
 
 resource "aws_key_pair" "petclinicn" {
   key_name   = "petclinicn-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJlceIY3JeiY/Th1ve92j+RngxVwyeARqry9NycbkhYzgP96QNWljht5UW6gz6dk3+nMQhG41JWI13vWtlOgHSLMvsSkhzgzB3TdA58OYzVYW3QHrxiyG2Cl3dqaTquEFpme0TBA6+nXER8RSmcHGvHTwOH2HDn70skBmh9jUWPCaHpJ5D/D8/oUWNutmOj58dufnuMRgxSHAvRi4iSu25hgxZIpdCXaHx1xjwmF+alvBgPFbG/0YXQdfwjzoOMxPY5mdxA8D2VNS/in6YX2JR4CVoUK9q7SMAKrkhwAT+8oaSlsDMOhgxaK5lt6cLkrFRSyQbQ1F0U6S7isE4opAH reddy@nagesh"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDw4nMjzni41y5qlIWKGJD6VVmFDjDHfxcJ67ELx/y4TMACLHKMyXaDtIy4AElFrSsnZSFskRL+S5LJpg/x8fgFPXA3Y03qgxI23w4nGZE4tPuPKm3ryYwyoZbuJ48FHhONjxc7ZsxICkvmE5lpseIgzScIst03GXJmIAtE7glZoKw67FnkbnZnWacLXuRVb8wJeqpK3FO9cj9/4cbU6cxnGqEAI+5R1WiVdBw0mVknTPbNakiVQS+H742Lozbam1E422F6HLaymJhN8Kb7TgGKluntrDktRg5Odtkbnnsp4MEZHZzOIWn+vpM7MSrohCtbX5OK5a6TDOfIK6LN/phi+bmIm0ySRr7GyVMbAlyAKBJbbk7J5igEBmK7yY4NYUM54ozF/tExlDSMKi/Ai+bPSI4cUcV/kPp1MNpIlDvTcDI1xklfD2HNEogxoq/4Doc5wm+MWmqbN4ce/vUMrYkeq9vHJ9cZXbNOaLyy/J4Ddpu7m69j9HN0e8wRryKhDv8= girie@LAPTOP-JVC21MB8"
 }  

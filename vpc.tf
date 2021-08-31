@@ -23,7 +23,7 @@ resource "aws_internet_gateway" "internet-gateway" {
 resource "aws_subnet" "dev-public-subnet-1a" {
   vpc_id                  = aws_vpc.dev-vpc.id
   cidr_block              = var.dev-public-subnet-1a-cidr
-  availability_zone       = "us-east-2a"
+  availability_zone       = "sa-east-1a"
   map_public_ip_on_launch = true
 
   tags = {
@@ -36,7 +36,7 @@ resource "aws_subnet" "dev-public-subnet-1a" {
 resource "aws_subnet" "dev-public-subnet-1b" {
   vpc_id                  = aws_vpc.dev-vpc.id
   cidr_block              = var.dev-public-subnet-1b-cidr
-  availability_zone       = "us-east-2b"
+  availability_zone       = "sa-east-1b"
   map_public_ip_on_launch = true
 
   tags = {
@@ -46,7 +46,7 @@ resource "aws_subnet" "dev-public-subnet-1b" {
 resource "aws_subnet" "dev-public-subnet-1c" {
   vpc_id                  = aws_vpc.dev-vpc.id
   cidr_block              = var.dev-public-subnet-1c-cidr
-  availability_zone       = "us-east-2c"
+  availability_zone       = "sa-east-1c"
   map_public_ip_on_launch = true
 
   tags = {
@@ -89,7 +89,7 @@ resource "aws_route_table_association" "dev-public-subnet-1c-route-table-associa
 resource "aws_subnet" "dev-private-subnet-1a" {
   vpc_id                  = aws_vpc.dev-vpc.id
   cidr_block              = var.dev-private-subnet-1a-cidr
-  availability_zone       = "us-east-2a"
+  availability_zone       = "sa-east-1a"
   map_public_ip_on_launch = false
 
   tags = {
@@ -101,7 +101,7 @@ resource "aws_subnet" "dev-private-subnet-1a" {
 resource "aws_subnet" "dev-private-subnet-1b" {
   vpc_id                  = aws_vpc.dev-vpc.id
   cidr_block              = var.dev-private-subnet-1b-cidr
-  availability_zone       = "us-east-2b"
+  availability_zone       = "sa-east-1b"
   map_public_ip_on_launch = false
 
   tags = {
@@ -112,7 +112,7 @@ resource "aws_subnet" "dev-private-subnet-1b" {
 resource "aws_subnet" "dev-private-subnet-1c" {
   vpc_id                  = aws_vpc.dev-vpc.id
   cidr_block              = var.dev-private-subnet-1c-cidr
-  availability_zone       = "us-east-2c"
+  availability_zone       = "sa-east-1c"
   map_public_ip_on_launch = false
 
   tags = {
@@ -124,7 +124,7 @@ resource "aws_subnet" "dev-private-subnet-1c" {
 resource "aws_subnet" "dev-data-subnet-1a" {
   vpc_id                  = aws_vpc.dev-vpc.id
   cidr_block              = var.dev-data-subnet-1a-cidr
-  availability_zone       = "us-east-2a"
+  availability_zone       = "sa-east-1a"
   map_public_ip_on_launch = false
 
   tags = {
@@ -136,7 +136,7 @@ resource "aws_subnet" "dev-data-subnet-1a" {
 resource "aws_subnet" "dev-data-subnet-1b" {
   vpc_id                  = aws_vpc.dev-vpc.id
   cidr_block              = var.dev-data-subnet-1b-cidr
-  availability_zone       = "us-east-2b"
+  availability_zone       = "sa-east-1b"
   map_public_ip_on_launch = false
 
   tags = {
@@ -146,7 +146,7 @@ resource "aws_subnet" "dev-data-subnet-1b" {
 resource "aws_subnet" "dev-data-subnet-1c" {
   vpc_id                  = aws_vpc.dev-vpc.id
   cidr_block              = var.dev-data-subnet-1c-cidr
-  availability_zone       = "us-east-2c"
+  availability_zone       = "sa-east-1c"
   map_public_ip_on_launch = false
 
   tags = {
